@@ -7,33 +7,33 @@ describe('TrustedBy', () => {
     expect(screen.getByText('Trusted by Global Enterprises')).toBeInTheDocument()
   })
 
-  it('renders AWS wordmark', () => {
+  it('renders AWS logo', () => {
     render(<TrustedBy />)
-    expect(screen.getByText('AWS')).toBeInTheDocument()
+    expect(screen.getAllByAltText('AWS').length).toBeGreaterThanOrEqual(1)
   })
 
-  it('renders Microsoft Azure wordmark', () => {
+  it('renders Microsoft Azure logo', () => {
     render(<TrustedBy />)
-    expect(screen.getByText('Microsoft Azure')).toBeInTheDocument()
+    expect(screen.getAllByAltText('Microsoft Azure').length).toBeGreaterThanOrEqual(1)
   })
 
-  it('renders Oracle wordmark', () => {
+  it('renders Oracle logo', () => {
     render(<TrustedBy />)
-    expect(screen.getByText('Oracle')).toBeInTheDocument()
+    expect(screen.getAllByAltText('Oracle').length).toBeGreaterThanOrEqual(1)
   })
 
-  it('renders Cisco wordmark', () => {
+  it('renders Cisco logo', () => {
     render(<TrustedBy />)
-    expect(screen.getByText('Cisco')).toBeInTheDocument()
+    expect(screen.getAllByAltText('Cisco').length).toBeGreaterThanOrEqual(1)
   })
 
-  it('renders IBM wordmark', () => {
+  it('renders IBM logo', () => {
     render(<TrustedBy />)
-    expect(screen.getByText('IBM')).toBeInTheDocument()
+    expect(screen.getAllByAltText('IBM').length).toBeGreaterThanOrEqual(1)
   })
 
-  it('renders SAP wordmark', () => {
+  it('renders SAP logo', () => {
     render(<TrustedBy />)
-    expect(screen.getByText('SAP')).toBeInTheDocument()
+    expect(screen.getAllByAltText('SAP').length).toBeGreaterThanOrEqual(1)
   })
 })
