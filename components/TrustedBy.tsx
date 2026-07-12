@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 const PARTNERS = [
   { name: 'AWS', file: 'aws' },
   { name: 'Microsoft Azure', file: 'azure' },
@@ -20,13 +18,13 @@ export default function TrustedBy() {
           {[...PARTNERS, ...PARTNERS].map(({ name, file }, i) => (
             <div
               key={i}
-              className="flex items-center justify-center mx-12 opacity-50 hover:opacity-90 transition-opacity duration-300 h-10 w-28"
+              className="flex items-center justify-center mx-12 opacity-50 hover:opacity-90 transition-opacity duration-300"
             >
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={`/brands/${file}.svg`}
                 alt={name}
-                fill
-                className="object-contain"
+                style={{ height: '36px', width: 'auto' }}
               />
             </div>
           ))}
