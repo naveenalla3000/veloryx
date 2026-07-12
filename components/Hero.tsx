@@ -1,5 +1,5 @@
 const HERO_IMAGE_URL =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuAjmnqkeRf8IXawh53YmqEnCokOJPFs1AtP3mkhg0xZvu_FW53A2c2BvDbwo00fnxLr1gBvETUbghwfdAvcHJjhUK4tOPuaPjbDQqrwoftRthgB4JxD1OU1g7pNmnhZD86Vku6SzB_--HmFbe1ar5-IpNMF2nGQrSkAAnQXubG4y64VuUTWpDEH95M7i-zImOpbr7SB3ylA6jxRMbSKgeCRy1QfYFoe_khBg-mWGhZOxfw-1ayhfO_E8eUZ19JXZfLq00fUKXVP0Q'
+  'https://images.pexels.com/photos/3520679/pexels-photo-3520679.jpeg?auto=compress&cs=tinysrgb&w=2000'
 
 export default function Hero() {
   return (
