@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react'
 import Navbar from '@/components/Navbar'
 
 describe('Navbar', () => {
-  it('renders brand name', () => {
+  it('renders logo', () => {
     render(<Navbar />)
-    expect(screen.getByText('Veloryx')).toBeInTheDocument()
+    expect(screen.getByAltText('Veloryx Technologies')).toBeInTheDocument()
   })
 
   it('renders all nav links', () => {

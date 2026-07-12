@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react'
 import Home from '@/app/page'
 
 describe('Home page', () => {
-  it('renders navbar brand', () => {
+  it('renders navbar logo', () => {
     render(<Home />)
-    expect(screen.getAllByText('Veloryx').length).toBeGreaterThanOrEqual(1)
+    expect(screen.getAllByAltText('Veloryx Technologies').length).toBeGreaterThanOrEqual(1)
   })
 
   it('renders hero headline', () => {

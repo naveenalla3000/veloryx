@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react'
 import Footer from '@/components/Footer'
 
 describe('Footer', () => {
-  it('renders brand name', () => {
+  it('renders logo', () => {
     render(<Footer />)
-    expect(screen.getByText('Veloryx')).toBeInTheDocument()
+    expect(screen.getByAltText('Veloryx Technologies')).toBeInTheDocument()
   })
 
   it('renders the tagline', () => {
