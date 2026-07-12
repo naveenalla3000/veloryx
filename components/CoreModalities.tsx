@@ -20,12 +20,12 @@ function StrategicPlanningCard() {
           blueprints required for sustainable, high-velocity growth.
         </p>
       </div>
-      <div className="flex items-center gap-2 text-primary font-mono-technical text-mono-technical mt-4 cursor-pointer">
+      <a href="#" className="flex items-center gap-2 text-primary font-mono-technical text-mono-technical mt-4 cursor-pointer">
         View Methodology{' '}
         <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">
           arrow_right_alt
         </span>
-      </div>
+      </a>
     </div>
   )
 }
@@ -66,7 +66,7 @@ function CloudSolutionsCard() {
           Deploy Node <span className="material-symbols-outlined text-sm">cloud_sync</span>
         </button>
       </div>
-      <div className="md:w-1/2 h-full relative border-l border-white/5">
+      <div className="md:w-1/2 h-full min-h-[200px] md:min-h-0 relative border-l border-white/5">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-screen"
           style={{ backgroundImage: `url('${CLOUD_IMAGE_URL}')` }}

@@ -8,7 +8,7 @@ export default function Footer() {
             Engineered in the UAE.<br />Deployed Globally.
           </p>
           <div className="text-on-surface-variant text-sm">
-            © 2024 Veloryx Technologies FZ-LLC. All rights reserved.
+            © 2026 Veloryx Technologies FZ-LLC. All rights reserved.
           </div>
         </div>
         <div className="col-span-1 flex flex-col space-y-4">
