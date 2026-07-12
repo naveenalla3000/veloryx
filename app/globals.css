@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glass-card {
+  background: rgba(17, 20, 23, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.05);
+}
+
+.glow-btn {
+  transition: all 0.3s ease;
+}
+.glow-btn:hover {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #4edea3, #89ceff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.progress-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+  background-size: 200% 100%;
+  animation: moveGradient 3s linear infinite;
+}
+
+@keyframes moveGradient {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+body {
+  background-color: #0c0e12;
+  color: #e1e2e7;
+}
+
+.tech-grid {
+  background-image:
+    linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
