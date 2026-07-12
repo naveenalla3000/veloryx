@@ -35,7 +35,7 @@ export default function HowWeWork() {
         A disciplined four-phase methodology refined across 200+ enterprise engagements.
       </p>
       <div className="relative grid grid-cols-1 md:grid-cols-4 gap-gutter">
-        <div className="hidden md:block absolute top-6 left-0 right-0 border-t border-outline-variant -z-0" />
+        <div className="hidden md:block absolute top-6 left-0 right-0 border-t border-outline-variant z-0" />
         {STEPS.map(({ number, title, description }) => (
           <div key={number} className="relative z-10 flex flex-col gap-4">
             <div className="w-12 h-12 rounded-full border border-primary/30 bg-surface-container-low flex items-center justify-center font-mono-technical text-mono-technical text-primary">

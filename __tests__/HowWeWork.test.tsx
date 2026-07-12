@@ -46,4 +46,24 @@ describe('HowWeWork', () => {
     render(<HowWeWork />)
     expect(screen.getByText('Continuous Support')).toBeInTheDocument()
   })
+
+  it('renders step 1 description', () => {
+    render(<HowWeWork />)
+    expect(screen.getByText('We map your current infrastructure, identify risk vectors, and define measurable success criteria.')).toBeInTheDocument()
+  })
+
+  it('renders step 2 description', () => {
+    render(<HowWeWork />)
+    expect(screen.getByText('Our engineers draft resilient, multi-cloud blueprints aligned to your compliance and performance requirements.')).toBeInTheDocument()
+  })
+
+  it('renders step 3 description', () => {
+    render(<HowWeWork />)
+    expect(screen.getByText('Phased rollout with zero-downtime migrations, automated testing, and real-time observability.')).toBeInTheDocument()
+  })
+
+  it('renders step 4 description', () => {
+    render(<HowWeWork />)
+    expect(screen.getByText('24/7 monitoring, proactive incident response, and quarterly architecture reviews.')).toBeInTheDocument()
+  })
 })
