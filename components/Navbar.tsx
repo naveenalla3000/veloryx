@@ -3,8 +3,8 @@ import Image from 'next/image'
 export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/60 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(16,185,129,0.1)]">
-      <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-2 w-full max-w-[1440px] mx-auto">
-        <Image src="/logo.png" alt="Veloryx Technologies" width={120} height={40} className="object-contain mix-blend-screen" priority />
+      <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-1 w-full max-w-[1440px] mx-auto">
+        <Image src="/logo.png" alt="Veloryx Technologies" width={100} height={32} className="object-contain mix-blend-screen" priority />
         <div className="hidden md:flex items-center space-x-8">
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Solutions</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Expertise</a>
