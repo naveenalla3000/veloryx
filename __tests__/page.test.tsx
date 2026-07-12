@@ -21,4 +21,24 @@ describe('Home page', () => {
     render(<Home />)
     expect(screen.getByText(/Veloryx Technologies FZ-LLC/i)).toBeInTheDocument()
   })
+
+  it('renders StatsBar stat value 200+', () => {
+    render(<Home />)
+    expect(screen.getByText('200+')).toBeInTheDocument()
+  })
+
+  it('renders TrustedBy heading', () => {
+    render(<Home />)
+    expect(screen.getByText('Trusted by Global Enterprises')).toBeInTheDocument()
+  })
+
+  it('renders HowWeWork heading', () => {
+    render(<Home />)
+    expect(screen.getByText('How We Operate')).toBeInTheDocument()
+  })
+
+  it('renders CTABanner heading', () => {
+    render(<Home />)
+    expect(screen.getByText('Ready to Architect Your Future?')).toBeInTheDocument()
+  })
 })
