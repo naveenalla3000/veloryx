@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap w-full max-w-[1440px] mx-auto">
         <div className="col-span-1 md:col-span-2">
           <div className="mb-4">
-            <Image src="/logo.png" alt="Veloryx Technologies" width={140} height={47} className="object-contain" />
+            <Image src="/logo.png" alt="Veloryx Technologies" width={140} height={47} className="object-contain mix-blend-screen" />
           </div>
           <p className="font-mono-technical text-mono-technical text-on-surface-variant max-w-xs mb-8">
             Engineered in the UAE.<br />Deployed Globally.
