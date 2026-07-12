@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex-grow pt-[120px] pb-section-gap">
+      <main className="flex-grow pt-16 pb-section-gap">
         <Hero />
         <CoreModalities />
         <TrustedBy />

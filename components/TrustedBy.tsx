@@ -12,7 +12,7 @@ const PARTNERS = [
 export default function TrustedBy() {
   return (
     <section className="py-section-gap max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
-      <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-16 text-center">
+      <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8 text-center">
         Trusted by Global Enterprises
       </h2>
       <div className="border-t border-b border-outline-variant py-12 overflow-hidden">

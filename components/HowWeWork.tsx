@@ -31,7 +31,7 @@ export default function HowWeWork() {
       <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">
         How We Operate
       </h2>
-      <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-16">
+      <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8">
         A disciplined four-phase methodology refined across 200+ enterprise engagements.
       </p>
       <div className="relative grid grid-cols-1 md:grid-cols-4 gap-gutter">

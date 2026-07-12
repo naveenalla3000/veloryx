@@ -79,7 +79,7 @@ function CloudSolutionsCard() {
 export default function CoreModalities() {
   return (
     <section className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto py-section-gap">
-      <div className="mb-16">
+      <div className="mb-8">
         <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">
           Core Modalities
         </h2>

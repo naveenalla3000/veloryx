@@ -67,7 +67,7 @@ const config: Config = {
       spacing: {
         gutter: '24px',
         'margin-desktop': '80px',
-        'section-gap': '160px',
+        'section-gap': '80px',
         unit: '4px',
         'margin-mobile': '20px',
       },
