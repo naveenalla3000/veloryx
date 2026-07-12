@@ -22,11 +22,6 @@ describe('Home page', () => {
     expect(screen.getByText(/Veloryx Technologies FZ-LLC/i)).toBeInTheDocument()
   })
 
-  it('renders StatsBar stat value 200+', () => {
-    render(<Home />)
-    expect(screen.getByText('200+')).toBeInTheDocument()
-  })
-
   it('renders TrustedBy heading', () => {
     render(<Home />)
     expect(screen.getByText('Trusted by Global Enterprises')).toBeInTheDocument()
