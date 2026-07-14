@@ -30,9 +30,9 @@ export default function Hero() {
             Schedule a Consultation{' '}
             <span className="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
-          <button className="w-full sm:w-auto border border-outline-variant text-on-surface font-mono-technical text-mono-technical px-8 py-4 rounded hover:border-primary hover:text-primary transition-colors flex items-center justify-center gap-2">
+          <a href="/services" className="w-full sm:w-auto border border-outline-variant text-on-surface font-mono-technical text-mono-technical px-8 py-4 rounded hover:border-primary hover:text-primary transition-colors flex items-center justify-center gap-2">
             Explore Capabilities
-          </button>
+          </a>
         </div>
       </div>
     </section>

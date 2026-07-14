@@ -15,9 +15,9 @@ export default function CTABanner() {
               Schedule a Consultation{' '}
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
-            <button type="button" className="border border-outline-variant text-on-surface font-mono-technical text-mono-technical px-8 py-4 rounded hover:border-primary hover:text-primary transition-colors">
+            <a href="/projects" className="border border-outline-variant text-on-surface font-mono-technical text-mono-technical px-8 py-4 rounded hover:border-primary hover:text-primary transition-colors">
               View Our Work
-            </button>
+            </a>
           </div>
         </div>
       </div>
