@@ -14,6 +14,7 @@ describe('Navbar', () => {
     expect(screen.getByText('Projects')).toBeInTheDocument()
     expect(screen.getByText('About')).toBeInTheDocument()
     expect(screen.getByText('Insights')).toBeInTheDocument()
+    expect(screen.getByText('Contact')).toBeInTheDocument()
   })
 
   it('renders consultation CTA button', () => {
