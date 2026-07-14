@@ -64,20 +64,93 @@ export default function ProductPageLayout({ product }: { product: ProductData })
                 Everything you need. Nothing you don&apos;t.
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-              {features.map(({ icon: fIcon, title: fTitle, description: fDesc }) => (
-                <div key={fTitle} className="glass-card rounded-xl p-8 flex flex-col gap-4 group glow-hover transition-all duration-500">
-                  <div className="w-10 h-10 flex items-center justify-center bg-primary/10 border border-primary/20">
-                    <span className="material-symbols-outlined text-primary text-[20px]">{fIcon}</span>
+
+            {/* Bento grid — 6 features with free dimensions */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[280px]">
+              {features.map(({ icon: fIcon, title: fTitle, description: fDesc }, i) => {
+                const sizeClass = [
+                  'md:col-span-7 md:row-span-2',
+                  'md:col-span-5',
+                  'md:col-span-5',
+                  'md:col-span-4',
+                  'md:col-span-4',
+                  'md:col-span-4',
+                ][i]
+                const num = String(i + 1).padStart(2, '0')
+                const isLarge = i === 0
+                const isMed = i === 1 || i === 2
+
+                return (
+                  <div
+                    key={fTitle}
+                    className={`glass-card rounded-xl p-8 flex flex-col group glow-hover transition-all duration-500 relative overflow-hidden ${sizeClass}`}
+                  >
+                    {/* Background number */}
+                    <span
+                      className="absolute bottom-0 right-3 font-mono-technical font-bold text-primary pointer-events-none select-none leading-none"
+                      style={{ fontSize: isLarge ? '160px' : '96px', opacity: 0.04 }}
+                    >
+                      {num}
+                    </span>
+
+                    {/* SVG decoration — large card: concentric arcs */}
+                    {isLarge && (
+                      <svg
+                        className="absolute top-0 right-0 text-primary pointer-events-none"
+                        width="220" height="220" viewBox="0 0 220 220"
+                        style={{ opacity: 0.04 }}
+                      >
+                        <circle cx="220" cy="0" r="70"  fill="none" stroke="currentColor" strokeWidth="1.5" />
+                        <circle cx="220" cy="0" r="110" fill="none" stroke="currentColor" strokeWidth="1" />
+                        <circle cx="220" cy="0" r="150" fill="none" stroke="currentColor" strokeWidth="0.75" />
+                        <circle cx="220" cy="0" r="190" fill="none" stroke="currentColor" strokeWidth="0.5" />
+                      </svg>
+                    )}
+
+                    {/* SVG decoration — medium cards: diagonal lines */}
+                    {isMed && (
+                      <svg
+                        className="absolute top-0 right-0 text-primary pointer-events-none"
+                        width="120" height="120" viewBox="0 0 120 120"
+                        style={{ opacity: 0.05 }}
+                      >
+                        {[0, 20, 40, 60, 80, 100, 120].map((offset) => (
+                          <line key={offset} x1={offset} y1="0" x2="120" y2={120 - offset} stroke="currentColor" strokeWidth="1" />
+                        ))}
+                        {[20, 40, 60, 80, 100, 120].map((offset) => (
+                          <line key={`b${offset}`} x1="0" y1={offset} x2={120 - offset} y2="120" stroke="currentColor" strokeWidth="1" />
+                        ))}
+                      </svg>
+                    )}
+
+                    {/* SVG decoration — small cards: dot grid */}
+                    {!isLarge && !isMed && (
+                      <svg
+                        className="absolute top-3 right-3 text-primary pointer-events-none"
+                        width="72" height="72" viewBox="0 0 72 72"
+                        style={{ opacity: 0.08 }}
+                      >
+                        {[0, 1, 2, 3].flatMap((row) =>
+                          [0, 1, 2, 3].map((col) => (
+                            <circle key={`${row}-${col}`} cx={col * 22 + 3} cy={row * 22 + 3} r="2.5" fill="currentColor" />
+                          ))
+                        )}
+                      </svg>
+                    )}
+
+                    {/* Content */}
+                    <div className="mb-5 w-10 h-10 flex items-center justify-center bg-primary/10 border border-primary/20 shrink-0">
+                      <span className="material-symbols-outlined text-primary text-[20px]">{fIcon}</span>
+                    </div>
+                    <h3 className={`text-on-surface group-hover:text-primary transition-colors mb-3 ${isLarge ? 'font-headline-lg text-headline-lg-mobile' : 'font-headline-md text-headline-md'}`}>
+                      {fTitle}
+                    </h3>
+                    <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                      {fDesc}
+                    </p>
                   </div>
-                  <h3 className="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
-                    {fTitle}
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                    {fDesc}
-                  </p>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </section>
