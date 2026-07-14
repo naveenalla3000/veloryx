@@ -10,12 +10,12 @@ const QUICK_LINKS = [
 ]
 
 const PRODUCTS = [
-  { label: 'CRM Platform', href: '/services' },
-  { label: 'ERP Suite', href: '/services' },
-  { label: 'Healthcare Suite', href: '/services' },
-  { label: 'Education Platform', href: '/services' },
-  { label: 'Workflow Automation', href: '/services' },
-  { label: 'Data Intelligence', href: '/services' },
+  { label: 'CRM Platform', href: '/products/crm' },
+  { label: 'ERP Suite', href: '/products/erp' },
+  { label: 'Healthcare Suite', href: '/products/healthcare' },
+  { label: 'Education Platform', href: '/products/education' },
+  { label: 'Workflow Automation', href: '/products/automation' },
+  { label: 'Data Intelligence', href: '/products/data-intelligence' },
 ]
 
 const CONTACT_ITEMS = [
