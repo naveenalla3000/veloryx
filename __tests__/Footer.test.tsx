@@ -7,14 +7,29 @@ describe('Footer', () => {
     expect(screen.getByAltText('Veloryx Technologies')).toBeInTheDocument()
   })
 
-  it('renders the tagline', () => {
+  it('renders brand description', () => {
     render(<Footer />)
-    expect(screen.getByText(/Engineered in the UAE/i)).toBeInTheDocument()
+    expect(screen.getByText(/premier enterprise IT consultancy/i)).toBeInTheDocument()
   })
 
   it('renders copyright', () => {
     render(<Footer />)
-    expect(screen.getByText(/Veloryx Technologies FZ-LLC/i)).toBeInTheDocument()
+    expect(screen.getByText(/Registered in RAKEZ/i)).toBeInTheDocument()
+  })
+
+  it('renders quick links', () => {
+    render(<Footer />)
+    expect(screen.getByText('Home')).toBeInTheDocument()
+    expect(screen.getByText('About Us')).toBeInTheDocument()
+    expect(screen.getByText('Projects')).toBeInTheDocument()
+    expect(screen.getByText('Free Consultation')).toBeInTheDocument()
+  })
+
+  it('renders contact details', () => {
+    render(<Footer />)
+    expect(screen.getByText(/Ras Al Khaimah Economic Zone/i)).toBeInTheDocument()
+    expect(screen.getByText('+971 7 243 5000')).toBeInTheDocument()
+    expect(screen.getByText('contact@veloryx.com')).toBeInTheDocument()
   })
 
   it('renders legal links', () => {
@@ -22,12 +37,5 @@ describe('Footer', () => {
     expect(screen.getByText('Privacy Policy')).toBeInTheDocument()
     expect(screen.getByText('Terms of Service')).toBeInTheDocument()
     expect(screen.getByText('Security')).toBeInTheDocument()
-  })
-
-  it('renders connect links', () => {
-    render(<Footer />)
-    expect(screen.getByText('Contact')).toBeInTheDocument()
-    expect(screen.getByText('Global Offices')).toBeInTheDocument()
-    expect(screen.getByText('Careers')).toBeInTheDocument()
   })
 })

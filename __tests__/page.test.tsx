@@ -19,7 +19,7 @@ describe('Home page', () => {
 
   it('renders footer copyright', () => {
     render(<Home />)
-    expect(screen.getByText(/Veloryx Technologies FZ-LLC/i)).toBeInTheDocument()
+    expect(screen.getByText(/Registered in RAKEZ/i)).toBeInTheDocument()
   })
 
   it('renders TrustedBy heading', () => {
