@@ -40,9 +40,9 @@ export default function ProductsDropdown() {
       </button>
 
       {open && (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-64 glass-card rounded-xl py-2 shadow-2xl z-50 border border-white/10 emerald-glow">
+        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-64 bg-surface-container-low rounded-xl py-2 shadow-2xl z-50 border border-white/10 emerald-glow">
           {/* Arrow */}
-          <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-surface-container rotate-45 border-l border-t border-white/10" />
+          <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-surface-container-low rotate-45 border-l border-t border-white/10" />
 
           {PRODUCTS.map(({ label, href, code, icon }) => (
             <a
