@@ -12,6 +12,7 @@ describe('Navbar', () => {
     expect(screen.getByText('Solutions')).toBeInTheDocument()
     expect(screen.getByText('Expertise')).toBeInTheDocument()
     expect(screen.getByText('Projects')).toBeInTheDocument()
+    expect(screen.getByText('About')).toBeInTheDocument()
     expect(screen.getByText('Insights')).toBeInTheDocument()
   })
 
