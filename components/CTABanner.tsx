@@ -11,10 +11,10 @@ export default function CTABanner() {
             Partner with Veloryx to design infrastructure that scales with your ambition.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button type="button" className="bg-primary text-on-primary font-mono-technical text-mono-technical px-8 py-4 rounded glow-btn flex items-center gap-2">
+            <a href="/consultation" className="bg-primary text-on-primary font-mono-technical text-mono-technical px-8 py-4 rounded glow-btn flex items-center gap-2">
               Schedule a Consultation{' '}
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
-            </button>
+            </a>
             <button type="button" className="border border-outline-variant text-on-surface font-mono-technical text-mono-technical px-8 py-4 rounded hover:border-primary hover:text-primary transition-colors">
               View Our Work
             </button>

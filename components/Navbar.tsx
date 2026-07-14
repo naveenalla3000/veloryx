@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import ServicesDropdown from './ServicesDropdown'
-import ProductsDropdown from './ProductsDropdown'
 
 const MOBILE_SERVICES = [
   { label: 'CRM Platform',         href: '/products/crm',              code: 'P01', icon: 'manage_accounts' },
@@ -14,7 +13,6 @@ const MOBILE_SERVICES = [
   { label: 'Data Intelligence',    href: '/products/data-intelligence',code: 'P06', icon: 'analytics' },
 ]
 
-const MOBILE_PRODUCTS = MOBILE_SERVICES
 
 const NAV_LINKS = [
   { label: 'Home',     href: '/' },
@@ -129,7 +127,6 @@ export default function Navbar() {
             <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/">Home</a>
             <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/about">About</a>
             <ServicesDropdown />
-            <ProductsDropdown />
             <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/projects">Projects</a>
             <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/contact">Contact</a>
           </div>
@@ -189,7 +186,6 @@ export default function Navbar() {
               ))}
 
               <MobileAccordion label="Services" items={MOBILE_SERVICES} onClose={close} />
-              <MobileAccordion label="Products" items={MOBILE_PRODUCTS} onClose={close} />
 
               {NAV_LINKS.slice(2).map(({ label, href }) => (
                 <a

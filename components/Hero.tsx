@@ -26,10 +26,10 @@ export default function Hero() {
           scalable, and secure digital ecosystems that define the next era of technological dominance.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-          <button className="w-full sm:w-auto bg-primary text-on-primary font-mono-technical text-mono-technical px-8 py-4 rounded glow-btn flex items-center justify-center gap-2">
+          <a href="/consultation" className="w-full sm:w-auto bg-primary text-on-primary font-mono-technical text-mono-technical px-8 py-4 rounded glow-btn flex items-center justify-center gap-2">
             Schedule a Consultation{' '}
             <span className="material-symbols-outlined text-sm">arrow_forward</span>
-          </button>
+          </a>
           <button className="w-full sm:w-auto border border-outline-variant text-on-surface font-mono-technical text-mono-technical px-8 py-4 rounded hover:border-primary hover:text-primary transition-colors flex items-center justify-center gap-2">
             Explore Capabilities
           </button>

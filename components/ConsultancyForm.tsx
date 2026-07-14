@@ -284,12 +284,12 @@ export default function ConsultancyForm() {
             >
               {btnLabel}
             </button>
-            <button
-              type="button"
-              className="flex-1 border border-primary text-primary font-label-caps text-label-caps py-5 px-8 rounded-lg tracking-[0.2em] transition-all duration-300 hover:bg-primary/10"
+            <a
+              href="/contact"
+              className="flex-1 border border-primary text-primary font-label-caps text-label-caps py-5 px-8 rounded-lg tracking-[0.2em] transition-all duration-300 hover:bg-primary/10 text-center"
             >
               Schedule a Call
-            </button>
+            </a>
           </div>
         </div>
       </form>
