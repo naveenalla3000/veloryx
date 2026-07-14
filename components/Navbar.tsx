@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import ServicesDropdown from './ServicesDropdown'
+import ProductsDropdown from './ProductsDropdown'
 
 export default function Navbar() {
   return (
@@ -10,6 +11,7 @@ export default function Navbar() {
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/">Home</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/about">About</a>
           <ServicesDropdown />
+          <ProductsDropdown />
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/projects">Projects</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/contact">Contact</a>
         </div>
