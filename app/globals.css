@@ -57,6 +57,26 @@ body {
   color: #e1e2e7;
 }
 
+.text-glow {
+  text-shadow: 0 0 30px rgba(78, 222, 163, 0.4);
+}
+
+.directive-card {
+  background: linear-gradient(135deg, rgba(29, 32, 35, 0.8) 0%, rgba(17, 20, 23, 0.95) 100%);
+  border: 1px solid rgba(134, 148, 138, 0.1);
+  transition: all 0.3s ease;
+}
+
+.architectural-overlay {
+  background: linear-gradient(to right, #111417 30%, transparent 100%);
+}
+
+@media (max-width: 768px) {
+  .architectural-overlay {
+    background: linear-gradient(to top, #111417 50%, transparent 100%);
+  }
+}
+
 .tech-grid {
   background-image:
     linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
