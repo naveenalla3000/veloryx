@@ -1,53 +1,24 @@
-const MODULES = [
-  {
-    icon: 'manage_accounts',
-    title: 'CRM Platform',
-    description:
-      'Our proprietary CRM gives sales, support, and marketing teams a unified view of every customer — with pipeline automation, real-time dashboards, and deep integration capabilities built for enterprise scale.',
-    features: ['Pipeline & Deal Tracking', 'Omnichannel Communication', 'AI-Powered Insights', 'Custom Workflow Automation'],
-    code: 'P01-CRM',
-  },
-  {
-    icon: 'account_balance',
-    title: 'ERP Suite',
-    description:
-      'End-to-end ERP covering finance, procurement, inventory, HR, and operations. Designed to unify all business functions on a single platform with real-time reporting and role-based access controls.',
-    features: ['Finance & Accounting', 'Procurement & Inventory', 'HR & Payroll', 'Real-Time Reporting'],
-    code: 'P02-ERP',
-  },
-  {
-    icon: 'monitor_heart',
-    title: 'Healthcare Suite',
-    description:
-      'A full stack of clinical tools including hospital management systems, electronic health records, patient portals, telemedicine modules, and lab & pharmacy integrations — built to UAE DOH standards.',
-    features: ['Hospital Management System', 'Electronic Health Records', 'Telemedicine & Patient Portal', 'Lab & Pharmacy Integration'],
-    code: 'P03-HEALTH',
-  },
-  {
-    icon: 'school',
-    title: 'Education Platform',
-    description:
-      'Purpose-built EdTech solutions covering LMS, student information systems, online assessments, and smart campus tools — aligned to UAE Ministry of Education frameworks and Vision 2031.',
-    features: ['Learning Management System', 'Student Information System', 'Online Assessments', 'Smart Campus & Analytics'],
-    code: 'P04-EDU',
-  },
-  {
-    icon: 'settings_suggest',
-    title: 'Workflow Automation',
-    description:
-      'Intelligent process automation that eliminates manual bottlenecks across departments — from document approvals to multi-step enterprise workflows — saving hundreds of operational hours per month.',
-    features: ['No-Code Process Builder', 'Document & Approval Flows', 'Cross-System Triggers', 'Audit Trails & Compliance'],
-    code: 'P05-AUTO',
-  },
-  {
-    icon: 'analytics',
-    title: 'Data Intelligence',
-    description:
-      'Advanced analytics and BI dashboards that transform raw operational data into actionable decisions — with predictive models, custom KPI tracking, and executive-level reporting built in.',
-    features: ['Custom BI Dashboards', 'Predictive Analytics', 'KPI Monitoring', 'Data Integration Layer'],
-    code: 'P06-DATA',
-  },
-]
+function FeatureList({ items }: { items: string[] }) {
+  return (
+    <ul className="space-y-2">
+      {items.map((f) => (
+        <li key={f} className="flex items-center gap-3 font-mono-technical text-mono-technical text-on-surface-variant">
+          <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
+          {f}
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+function CardFooter({ code }: { code: string }) {
+  return (
+    <div className="mt-auto pt-6 border-t border-white/5 font-mono-technical text-mono-technical text-outline group-hover:text-primary transition-colors flex justify-between items-center">
+      <span>{code}</span>
+      <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+    </div>
+  )
+}
 
 export default function ServicesModules() {
   return (
@@ -58,38 +29,122 @@ export default function ServicesModules() {
           Tools We Have Built
         </h2>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-          Six advanced software products — each developed in-house, refined across dozens of enterprise deployments, and ready to integrate into your operations.
+          Six advanced software products — each developed in-house, refined across dozens of enterprise
+          deployments, and ready to integrate into your operations.
         </p>
       </div>
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-        {MODULES.map(({ icon, title, description, features, code }) => (
-          <div
-            key={code}
-            className="glass-card p-10 flex flex-col group glow-hover transition-all duration-500"
-          >
-            <div className="mb-6 w-12 h-12 flex items-center justify-center bg-primary/10 border border-primary/20">
-              <span className="material-symbols-outlined text-primary">{icon}</span>
-            </div>
-            <h3 className="font-headline-md text-headline-md text-on-surface mb-4 group-hover:text-primary transition-colors">
-              {title}
-            </h3>
-            <p className="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
-              {description}
-            </p>
-            <ul className="space-y-2 mb-8">
-              {features.map((f) => (
-                <li key={f} className="flex items-center gap-3 font-mono-technical text-mono-technical text-on-surface-variant">
-                  <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
-                  {f}
-                </li>
+
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[260px]">
+
+        {/* CRM — featured: wide + tall */}
+        <div className="glass-card md:col-span-7 md:row-span-2 rounded-xl p-10 flex flex-col group glow-hover transition-all duration-500 relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
+            <span className="material-symbols-outlined text-[160px] text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>
+              manage_accounts
+            </span>
+          </div>
+          <div className="mb-6 w-12 h-12 flex items-center justify-center bg-primary/10 border border-primary/20">
+            <span className="material-symbols-outlined text-primary">manage_accounts</span>
+          </div>
+          <div className="font-label-caps text-label-caps text-primary tracking-widest mb-2">P01-CRM</div>
+          <h3 className="font-headline-lg text-headline-lg-mobile text-on-surface mb-4 group-hover:text-primary transition-colors">
+            CRM Platform
+          </h3>
+          <p className="font-body-md text-body-md text-on-surface-variant mb-8 max-w-lg">
+            Our proprietary CRM gives sales, support, and marketing teams a unified view of every
+            customer — with pipeline automation, real-time dashboards, and deep integration capabilities
+            built for enterprise scale.
+          </p>
+          <FeatureList items={['Pipeline & Deal Tracking', 'Omnichannel Communication', 'AI-Powered Insights', 'Custom Workflow Automation']} />
+          <CardFooter code="P01-CRM" />
+        </div>
+
+        {/* ERP — normal */}
+        <div className="glass-card md:col-span-5 rounded-xl p-8 flex flex-col group glow-hover transition-all duration-500">
+          <div className="mb-4 w-12 h-12 flex items-center justify-center bg-primary/10 border border-primary/20">
+            <span className="material-symbols-outlined text-primary">account_balance</span>
+          </div>
+          <h3 className="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">
+            ERP Suite
+          </h3>
+          <p className="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+            End-to-end ERP covering finance, procurement, inventory, HR, and operations on a single platform
+            with real-time reporting and role-based controls.
+          </p>
+          <FeatureList items={['Finance & Accounting', 'Procurement & Inventory', 'HR & Payroll', 'Real-Time Reporting']} />
+          <CardFooter code="P02-ERP" />
+        </div>
+
+        {/* Healthcare — normal */}
+        <div className="glass-card md:col-span-5 rounded-xl p-8 flex flex-col group glow-hover transition-all duration-500 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
+          <div className="mb-4 w-12 h-12 flex items-center justify-center bg-primary/10 border border-primary/20 z-10">
+            <span className="material-symbols-outlined text-primary">monitor_heart</span>
+          </div>
+          <h3 className="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors z-10">
+            Healthcare Suite
+          </h3>
+          <p className="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow z-10">
+            Clinical tools including HMS, EHR, patient portals, and telemedicine — built to UAE DOH
+            standards.
+          </p>
+          <FeatureList items={['Hospital Management System', 'Electronic Health Records', 'Telemedicine & Patient Portal', 'Lab & Pharmacy Integration']} />
+          <CardFooter code="P03-HEALTH" />
+        </div>
+
+        {/* Education — wide */}
+        <div className="glass-card md:col-span-6 rounded-xl p-8 flex flex-col group glow-hover transition-all duration-500">
+          <div className="mb-4 w-12 h-12 flex items-center justify-center bg-primary/10 border border-primary/20">
+            <span className="material-symbols-outlined text-primary">school</span>
+          </div>
+          <h3 className="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">
+            Education Platform
+          </h3>
+          <p className="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+            Purpose-built EdTech aligned to UAE Ministry of Education and Vision 2031 — covering LMS,
+            SIS, online assessments, and smart campus tools.
+          </p>
+          <FeatureList items={['Learning Management System', 'Student Information System', 'Online Assessments', 'Smart Campus & Analytics']} />
+          <CardFooter code="P04-EDU" />
+        </div>
+
+        {/* Automation — narrow */}
+        <div className="glass-card md:col-span-3 rounded-xl p-8 flex flex-col group glow-hover transition-all duration-500">
+          <div className="mb-4 w-12 h-12 flex items-center justify-center bg-primary/10 border border-primary/20">
+            <span className="material-symbols-outlined text-primary">settings_suggest</span>
+          </div>
+          <h3 className="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">
+            Workflow Automation
+          </h3>
+          <p className="font-body-md text-body-md text-on-surface-variant flex-grow">
+            Eliminate manual bottlenecks with no-code process automation across approvals, triggers, and
+            compliance flows.
+          </p>
+          <CardFooter code="P05-AUTO" />
+        </div>
+
+        {/* Data Intelligence — narrow */}
+        <div className="glass-card md:col-span-3 rounded-xl p-8 flex flex-col group glow-hover transition-all duration-500 relative overflow-hidden">
+          <div className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none opacity-20">
+            <div className="flex items-end gap-1 h-full px-4 pb-4">
+              {[40, 65, 45, 80, 55, 90, 70, 95].map((h, i) => (
+                <div key={i} className="flex-1 bg-primary rounded-sm" style={{ height: `${h}%` }} />
               ))}
-            </ul>
-            <div className="pt-6 border-t border-white/5 font-mono-technical text-mono-technical text-outline group-hover:text-primary transition-colors flex justify-between items-center">
-              <span>{code}</span>
-              <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </div>
           </div>
-        ))}
+          <div className="mb-4 w-12 h-12 flex items-center justify-center bg-primary/10 border border-primary/20">
+            <span className="material-symbols-outlined text-primary">analytics</span>
+          </div>
+          <h3 className="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-primary transition-colors">
+            Data Intelligence
+          </h3>
+          <p className="font-body-md text-body-md text-on-surface-variant flex-grow">
+            Predictive analytics and BI dashboards that transform raw data into executive-level decisions
+            with custom KPI tracking.
+          </p>
+          <CardFooter code="P06-DATA" />
+        </div>
+
       </div>
     </section>
   )
