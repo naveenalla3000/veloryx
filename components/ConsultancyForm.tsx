@@ -72,7 +72,7 @@ export default function ConsultancyForm() {
               { label: 'Full Name', name: 'fullName', type: 'text', placeholder: 'Alexander Sterling', required: true },
               { label: 'Company Name', name: 'company', type: 'text', placeholder: 'Sterling Global Ltd.' },
               { label: 'Business Email', name: 'email', type: 'email', placeholder: 'alex@sterling.com', required: true },
-              { label: 'Phone Number', name: 'phone', type: 'tel', placeholder: '+971 00 000 0000' },
+              { label: 'Phone Number', name: 'phone', type: 'tel', placeholder: '+971 50 123 4567' },
               { label: 'Country', name: 'country', type: 'text', placeholder: 'United Arab Emirates' },
             ].map(({ label, name, type, placeholder, required }) => (
               <div key={name} className="space-y-2">

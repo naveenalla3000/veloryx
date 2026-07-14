@@ -18,7 +18,7 @@ const CONTACT_ITEMS = [
   {
     icon: 'hub',
     label: 'Direct Channel',
-    content: '+971 7 200 0000',
+    content: '+971 7 243 5000',
     mono: true,
   },
   {
