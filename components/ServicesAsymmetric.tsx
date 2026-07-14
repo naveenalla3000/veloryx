@@ -3,15 +3,21 @@ import Image from 'next/image'
 const POINTS = [
   {
     number: '01',
-    title: 'Resilient Foundations',
+    title: 'Built In-House, Proven in the Field',
     description:
-      'Systems designed to outlast technological cycles, ensuring your investment retains value and functional excellence.',
+      'Every product we offer was engineered by our own teams — not white-labelled. Deployed across UAE hospitals, schools, and enterprises, our tools carry real-world battle scars and the maturity that comes with them.',
   },
   {
     number: '02',
-    title: 'Elite Integration',
+    title: 'Deeply Integrated, Not Siloed',
     description:
-      'Seamless cohesion between legacy hardware and futuristic software layers through proprietary bridging protocols.',
+      'Our CRM, ERP, healthcare, and education platforms are designed to work together seamlessly — sharing data, workflows, and reporting layers so your organisation operates as one connected system.',
+  },
+  {
+    number: '03',
+    title: 'Continuously Advancing',
+    description:
+      'We ship regular feature updates driven by client feedback and emerging technology — AI-assisted workflows, predictive analytics, and regulatory compliance updates are built into our roadmap by default.',
   },
 ]
 
@@ -38,8 +44,8 @@ export default function ServicesAsymmetric() {
       </div>
       <div className="lg:col-span-5">
         <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">
-          Architectural <br />
-          <span className="text-primary">Permanence.</span>
+          Why Our <br />
+          <span className="text-primary">Products Stand Out.</span>
         </h2>
         <div className="space-y-8">
           {POINTS.map(({ number, title, description }) => (

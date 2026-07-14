@@ -9,30 +9,30 @@ export default function ServicesHero() {
         <div className="flex items-center gap-4 mb-6">
           <span className="w-12 h-px bg-primary" />
           <span className="font-mono-technical text-mono-technical text-primary uppercase tracking-widest">
-            Elite Edition Services
+            Battle-Tested Software Products
           </span>
         </div>
         <h1 className="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-8 leading-tight">
-          Strategic <br />
-          <span className="text-primary italic">Infrastructure.</span>
+          Powerful Tools. <br />
+          <span className="text-primary italic">Built for Every Industry.</span>
         </h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-          Providing elite-tier IT consulting and specialized technical frameworks for global
-          enterprise leaders. Our solutions are defined by precision, security, and architectural
-          permanence.
+          We have engineered advanced CRM platforms, full-suite ERP systems, specialized healthcare
+          software, and education technology — each product refined through real-world enterprise
+          deployments across the UAE and beyond.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row gap-6">
           <button
             type="button"
             className="px-10 py-4 bg-primary text-on-primary font-label-caps text-label-caps hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all"
           >
-            Explore Frameworks
+            Explore Our Products
           </button>
           <button
             type="button"
             className="px-10 py-4 border border-outline text-on-surface font-label-caps text-label-caps hover:bg-white/5 transition-all"
           >
-            Capabilities PDF
+            Request a Demo
           </button>
         </div>
       </div>
