@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 const CONTACT_ITEMS = [
   {
     icon: 'location_on',
@@ -71,15 +69,14 @@ export default function ContactInfoPanel() {
       </div>
 
       {/* Map Tracking Interface */}
-      <div className="glass-card rounded-xl h-[340px] overflow-hidden relative border border-primary/10 tracking-interface group">
-        <div className="scanner-line" />
+      <div className="glass-card rounded-xl h-[340px] overflow-hidden relative border border-primary/10">
         {/* HUD top-left */}
-        <div className="absolute top-4 left-4 z-30 font-mono-technical text-[9px] text-primary opacity-60 pointer-events-none">
-          <p>LAT: 25.7911° N</p>
-          <p>LNG: 55.9432° E</p>
+        <div className="absolute top-4 left-4 z-30 font-mono-technical text-[9px] text-primary opacity-70 pointer-events-none">
+          <p>LAT: 25.6651° N</p>
+          <p>LNG: 55.7837° E</p>
         </div>
         {/* HUD top-right */}
-        <div className="absolute top-4 right-4 z-30 font-mono-technical text-[9px] text-primary opacity-60 pointer-events-none text-right">
+        <div className="absolute top-4 right-4 z-30 font-mono-technical text-[9px] text-primary opacity-70 pointer-events-none text-right">
           <p>SAT_LINK: ACTIVE</p>
           <p>SYNC: 100%</p>
         </div>
@@ -87,26 +84,23 @@ export default function ContactInfoPanel() {
         <div className="absolute bottom-4 left-4 z-30 flex items-center gap-2 pointer-events-none">
           <div className="w-1.5 h-1.5 bg-primary rounded-full animate-ping" />
           <span className="font-mono-technical text-[10px] text-primary tracking-[0.2em] uppercase">
-            Tracking Node: RAK_HQ
+            CWEP9900 · AL HAMRA INDUSTRIAL ZONE-FZ
           </span>
         </div>
-        {/* Map image */}
-        <Image
-          src="/contact-map.jpg"
-          alt="Ras Al Khaimah location map"
-          fill
-          className="object-cover grayscale brightness-50 contrast-125 group-hover:scale-110 transition-transform duration-[4000ms] ease-out"
+        {/* Google Maps iframe */}
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3596.1883478332193!2d55.783680275612554!3d25.66505042741268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sCWEP9900%20Compass%20Building%2C%20Al%20Shohada%20Road%2C%20AL%20Hamra%20Industrial%20Zone-FZ%2C%7C%20Ras%20Al%20Khaimah%2C%20United%20Arab%20Emirates!5e0!3m2!1sen!2sus!4v1784019538298!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) saturate(0.3) brightness(0.85)' }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+          title="Veloryx Technologies office location"
+          className="absolute inset-0 w-full h-full"
         />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90 pointer-events-none z-20" />
-        {/* Target reticle */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
-          <div className="relative w-12 h-12">
-            <div className="absolute inset-0 border border-primary/40 rounded-full animate-[spin_10s_linear_infinite]" />
-            <div className="absolute inset-2 border border-dashed border-primary/30 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-primary rounded-full shadow-[0_0_20px_rgba(16,185,129,1)]" />
-          </div>
-        </div>
+        {/* Bottom gradient to blend into card */}
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background/60 to-transparent pointer-events-none z-20" />
       </div>
     </div>
   )
