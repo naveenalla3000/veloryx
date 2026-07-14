@@ -18,25 +18,30 @@ export default function AboutHero() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-10">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             <span className="font-mono-technical text-[10px] text-primary tracking-[0.2em] uppercase font-bold">
-              Excellence in Engineering
+              UAE&apos;s Premier IT Consulting Firm
             </span>
           </div>
           <h1 className="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-8 leading-[1.05]">
-            Architecting the <br />
-            <span className="text-primary text-glow">Future</span> of Enterprise Infrastructure.
+            Building the <br />
+            <span className="text-primary text-glow">Digital Backbone</span> of the UAE.
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-12 leading-relaxed">
-            Headquartered in Ras Al Khaimah. We build visionary digital foundations designed for the
-            most demanding environments on Earth.
+            One of the UAE&apos;s largest IT consulting firms — headquartered in Ras Al Khaimah,
+            delivering bespoke software solutions for healthcare, education, and enterprise sectors
+            across the region and beyond.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <div className="glass-card p-6 rounded-lg flex-1">
               <span className="font-label-caps text-[10px] text-primary block mb-2">HEADQUARTERS</span>
               <p className="font-headline-md text-lg text-on-surface">Ras Al Khaimah, UAE</p>
             </div>
             <div className="glass-card p-6 rounded-lg flex-1">
-              <span className="font-label-caps text-[10px] text-primary block mb-2">FOUNDATION</span>
-              <p className="font-headline-md text-lg text-on-surface">Established 2024</p>
+              <span className="font-label-caps text-[10px] text-primary block mb-2">ESTABLISHED</span>
+              <p className="font-headline-md text-lg text-on-surface">2024</p>
+            </div>
+            <div className="glass-card p-6 rounded-lg flex-1">
+              <span className="font-label-caps text-[10px] text-primary block mb-2">SECTORS</span>
+              <p className="font-headline-md text-lg text-on-surface">3+ Industries</p>
             </div>
           </div>
         </div>
