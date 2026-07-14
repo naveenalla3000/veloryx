@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google'
+import FloatingCall from '@/components/FloatingCall'
 import './globals.css'
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="tech-grid fixed" />
         <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none -z-10" />
         {children}
+        <FloatingCall />
       </body>
     </html>
   )
