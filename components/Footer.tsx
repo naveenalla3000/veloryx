@@ -9,6 +9,15 @@ const QUICK_LINKS = [
   { label: 'Free Consultation', href: '/consultation' },
 ]
 
+const SERVICES = [
+  { label: 'CRM Platform', href: '/products/crm' },
+  { label: 'ERP Suite', href: '/products/erp' },
+  { label: 'Healthcare Suite', href: '/products/healthcare' },
+  { label: 'Education Platform', href: '/products/education' },
+  { label: 'Workflow Automation', href: '/products/automation' },
+  { label: 'Data Intelligence', href: '/products/data-intelligence' },
+]
+
 
 const CONTACT_ITEMS = [
   {
@@ -90,8 +99,18 @@ export default function Footer() {
           ))}
         </div>
 
+        {/* Services */}
+        <div className="md:col-span-3 flex flex-col gap-3">
+          <h4 className="font-label-caps text-label-caps text-on-surface tracking-widest mb-2 uppercase">
+            Services
+          </h4>
+          {SERVICES.map((s) => (
+            <FooterLink key={s.href} href={s.href} label={s.label} />
+          ))}
+        </div>
+
         {/* Contact */}
-        <div className="md:col-span-6 flex flex-col gap-6">
+        <div className="md:col-span-3 flex flex-col gap-6">
           <h4 className="font-label-caps text-label-caps text-on-surface tracking-widest mb-2 uppercase">
             Get In Touch
           </h4>
