@@ -11,12 +11,24 @@ function FeatureList({ items }: { items: string[] }) {
   )
 }
 
+const SLUG_MAP: Record<string, string> = {
+  'P01-CRM': '/products/crm',
+  'P02-ERP': '/products/erp',
+  'P03-HEALTH': '/products/healthcare',
+  'P04-EDU': '/products/education',
+  'P05-AUTO': '/products/automation',
+  'P06-DATA': '/products/data-intelligence',
+}
+
 function CardFooter({ code }: { code: string }) {
   return (
-    <div className="mt-auto pt-6 border-t border-white/5 font-mono-technical text-mono-technical text-outline group-hover:text-primary transition-colors flex justify-between items-center">
+    <a
+      href={SLUG_MAP[code]}
+      className="mt-auto pt-6 border-t border-white/5 font-mono-technical text-mono-technical text-outline group-hover:text-primary transition-colors flex justify-between items-center"
+    >
       <span>{code}</span>
       <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-    </div>
+    </a>
   )
 }
 

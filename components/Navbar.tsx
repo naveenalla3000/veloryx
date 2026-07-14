@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ProductsDropdown from './ProductsDropdown'
+import ServicesDropdown from './ServicesDropdown'
 
 export default function Navbar() {
   return (
@@ -9,8 +9,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-8">
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/">Home</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/about">About</a>
-          <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/services">Services</a>
-          <ProductsDropdown />
+          <ServicesDropdown />
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/projects">Projects</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/contact">Contact</a>
         </div>
