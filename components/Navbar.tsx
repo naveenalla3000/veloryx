@@ -11,9 +11,9 @@ export default function Navbar() {
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/services">Services</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/contact">Contact</a>
         </div>
-        <button className="hidden md:block bg-primary text-on-primary font-mono-technical text-mono-technical px-6 py-3 rounded glow-btn hover:scale-95 transition-transform">
+        <a href="/consultation" className="hidden md:block bg-primary text-on-primary font-mono-technical text-mono-technical px-6 py-3 rounded glow-btn hover:scale-95 transition-transform">
           Consultation
-        </button>
+        </a>
         <button className="md:hidden text-primary" aria-label="Open menu">
           <span className="material-symbols-outlined">menu</span>
         </button>

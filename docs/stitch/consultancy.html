@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consultancy Request | Veloryx Technologies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#00344d",
+                    "on-primary": "#003824",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#410005",
+                    "primary": "#4edea3",
+                    "on-secondary-container": "#00344e",
+                    "on-background": "#e1e2e7",
+                    "surface-tint": "#4edea3",
+                    "surface": "#111417",
+                    "surface-container-low": "#191c1f",
+                    "tertiary": "#ffb3af",
+                    "error-container": "#93000a",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#00a2e6",
+                    "outline-variant": "#3c4a42",
+                    "on-tertiary-fixed-variant": "#842225",
+                    "on-tertiary-container": "#711419",
+                    "on-error": "#690005",
+                    "tertiary-container": "#fc7c78",
+                    "surface-dim": "#111417",
+                    "on-secondary-fixed": "#001e2f",
+                    "background": "#111417",
+                    "outline": "#86948a",
+                    "on-primary-fixed": "#002113",
+                    "inverse-on-surface": "#2e3134",
+                    "tertiary-fixed": "#ffdad7",
+                    "surface-container-high": "#282a2e",
+                    "inverse-primary": "#006c49",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "secondary": "#89ceff",
+                    "primary-fixed": "#6ffbbe",
+                    "primary-container": "#10b981",
+                    "surface-container-lowest": "#0c0e12",
+                    "primary-fixed-dim": "#4edea3",
+                    "inverse-surface": "#e1e2e7",
+                    "on-surface-variant": "#bbcabf",
+                    "surface-container-highest": "#323539",
+                    "secondary-fixed-dim": "#89ceff",
+                    "secondary-fixed": "#c9e6ff",
+                    "surface-variant": "#323539",
+                    "on-primary-container": "#00422b",
+                    "tertiary-fixed-dim": "#ffb3af",
+                    "on-primary-fixed-variant": "#005236",
+                    "on-surface": "#e1e2e7",
+                    "surface-container": "#1d2023",
+                    "on-tertiary": "#650911",
+                    "surface-bright": "#37393d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "4px",
+                    "section-gap": "160px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "mono-technical": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "mono-technical": ["14px", {"lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #111417;
+            color: #e1e2e7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(29, 32, 35, 0.6);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+        .emerald-glow {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+        }
+        .emerald-glow-hover:hover {
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+        }
+        .blueprint-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(16, 185, 129, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .instrument-input {
+            background: #000000;
+            border: 1px solid #3c4a42;
+            transition: all 0.3s ease-out;
+        }
+        .instrument-input:focus {
+            border-color: #10b981;
+            outline: none;
+            box-shadow: 0 4px 0 -2px #10b981;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3c4a42;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary selection:text-on-primary">
+<!-- Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-margin-desktop py-4 max-w-[1440px] mx-auto left-0 right-0">
+<div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">Veloryx</div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Sovereignty</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Integrity</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Ethics</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Governance</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2 rounded-lg transition-all duration-300 ease-out hover:bg-primary-container emerald-glow-hover">Connect</button>
+</header>
+<main class="relative min-h-screen pt-32 pb-section-gap blueprint-grid">
+<div class="max-w-[1440px] mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-20">
+<!-- Left Column: Intro -->
+<div class="lg:w-2/5 space-y-12">
+<div class="space-y-6">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.3em]">Engagement Framework</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface leading-tight">Sovereign Engagement Protocol</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Experience technological luxury through a partnership built on architectural integrity. Veloryx Technologies provides elite consultancy for organizations demanding uncompromising digital excellence.
+                        </p>
+</div>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-surface-container-high border border-outline-variant/30 text-primary">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Swift Initiation</h3>
+<p class="text-on-surface-variant">Strategic response protocol initiated in under 24 hours.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-surface-container-high border border-outline-variant/30 text-primary">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Architectural Precision</h3>
+<p class="text-on-surface-variant">Bespoke engineering tailored to high-stakes UAE enterprise requirements.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-surface-container-high border border-outline-variant/30 text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Absolute Integrity</h3>
+<p class="text-on-surface-variant">Military-grade security protocols embedded in every engagement stage.</p>
+</div>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low border border-outline-variant/20 rounded-lg">
+<p class="font-mono-technical text-mono-technical text-on-surface-variant">
+                            SYSTEM_STATUS: <span class="text-primary">AWAITING_ENGAGEMENT</span><br/>
+                            PROTOCOL_ID: <span class="text-primary">VLX-9942-ENG</span>
+</p>
+</div>
+</div>
+<!-- Right Column: Form -->
+<div class="lg:w-3/5">
+<form class="glass-card emerald-glow rounded-xl overflow-hidden p-8 lg:p-12 space-y-12" id="consultancy-form">
+<!-- Section 1: Contact -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 border-b border-outline-variant/30 pb-4">
+<span class="font-label-caps text-label-caps text-primary">01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-wider">Contact Information</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Full Name *</label>
+<input class="instrument-input w-full p-4 text-on-surface rounded-none" placeholder="Alexander Sterling" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Company Name</label>
+<input class="instrument-input w-full p-4 text-on-surface rounded-none" placeholder="Sterling Global Ltd." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Business Email *</label>
+<input class="instrument-input w-full p-4 text-on-surface rounded-none" placeholder="alex@sterling.com" required="" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Phone Number</label>
+<input class="instrument-input w-full p-4 text-on-surface rounded-none" placeholder="+971 00 000 0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Country</label>
+<input class="instrument-input w-full p-4 text-on-surface rounded-none" placeholder="United Arab Emirates" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Preferred Contact Method</label>
+<select class="instrument-input w-full p-4 text-on-surface rounded-none appearance-none bg-black">
+<option>Email</option>
+<option>Phone</option>
+<option>WhatsApp</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Section 2: Project Info -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 border-b border-outline-variant/30 pb-4">
+<span class="font-label-caps text-label-caps text-primary">02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-wider">Project Scope</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Project Name</label>
+<input class="instrument-input w-full p-4 text-on-surface rounded-none" placeholder="Horizon ERP v2" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Project Category</label>
+<select class="instrument-input w-full p-4 text-on-surface rounded-none appearance-none bg-black">
+<option>Hospital Management</option>
+<option>ERP System</option>
+<option>CRM System</option>
+<option>E-commerce</option>
+<option>Mobile Application</option>
+<option>Web Application</option>
+<option>AI/ML Solution</option>
+<option>SaaS Platform</option>
+<option>FinTech</option>
+<option>EdTech</option>
+<option>Healthcare</option>
+<option>Logistics</option>
+<option>Real Estate</option>
+<option>Government</option>
+<option>Other</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Brief Project Description</label>
+<textarea class="instrument-input w-full p-4 text-on-surface rounded-none resize-none" placeholder="Describe the architectural requirements..." rows="4"></textarea>
+</div>
+</div>
+</div>
+<!-- Section 3: Project Details -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 border-b border-outline-variant/30 pb-4">
+<span class="font-label-caps text-label-caps text-primary">03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-wider">Operational Parameters</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Current Stage</label>
+<select class="instrument-input w-full p-4 text-on-surface rounded-none appearance-none bg-black">
+<option>Idea</option>
+<option>Planning</option>
+<option>MVP</option>
+<option>Existing Product</option>
+<option>Scaling</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Estimated Budget</label>
+<select class="instrument-input w-full p-4 text-on-surface rounded-none appearance-none bg-black">
+<option>Below $5K</option>
+<option>$5K–$20K</option>
+<option>$20K–$50K</option>
+<option>$50K+</option>
+<option>Prefer to Discuss</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Expected Timeline</label>
+<select class="instrument-input w-full p-4 text-on-surface rounded-none appearance-none bg-black">
+<option>ASAP</option>
+<option>1 Month</option>
+<option>2–3 Months</option>
+<option>3–6 Months</option>
+<option>Flexible</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Section 4: Services Required -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 border-b border-outline-variant/30 pb-4">
+<span class="font-label-caps text-label-caps text-primary">04</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-wider">Service Requirements</h2>
+</div>
+<div class="flex flex-wrap gap-3">
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-4 py-2 border border-outline-variant text-on-surface-variant font-mono-technical text-mono-technical peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all duration-200">UI/UX Design</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-4 py-2 border border-outline-variant text-on-surface-variant font-mono-technical text-mono-technical peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all duration-200">Web Development</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-4 py-2 border border-outline-variant text-on-surface-variant font-mono-technical text-mono-technical peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all duration-200">Mobile App Development</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-4 py-2 border border-outline-variant text-on-surface-variant font-mono-technical text-mono-technical peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all duration-200">Backend Development</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-4 py-2 border border-outline-variant text-on-surface-variant font-mono-technical text-mono-technical peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all duration-200">Cloud &amp; DevOps</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-4 py-2 border border-outline-variant text-on-surface-variant font-mono-technical text-mono-technical peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all duration-200">AI Integration</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-4 py-2 border border-outline-variant text-on-surface-variant font-mono-technical text-mono-technical peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all duration-200">API Development</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-4 py-2 border border-outline-variant text-on-surface-variant font-mono-technical text-mono-technical peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all duration-200">Software Consulting</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-4 py-2 border border-outline-variant text-on-surface-variant font-mono-technical text-mono-technical peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all duration-200">Maintenance &amp; Support</div>
+</label>
+</div>
+</div>
+<!-- Section 5: Additional Info -->
+<div class="space-y-6">
+<div class="flex items-center gap-3 border-b border-outline-variant/30 pb-4">
+<span class="font-label-caps text-label-caps text-primary">05</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-wider">Auxiliary Assets</h2>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Requirement Document (Optional)</label>
+<div class="instrument-input w-full p-4 flex items-center justify-center border-dashed border-2 group hover:border-primary cursor-pointer transition-all duration-300">
+<div class="flex items-center gap-2 text-on-surface-variant group-hover:text-primary">
+<span class="material-symbols-outlined">upload_file</span>
+<span class="font-mono-technical text-mono-technical">DRAG ASSET OR BROWSE SYSTEM</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">Additional Notes</label>
+<textarea class="instrument-input w-full p-4 text-on-surface rounded-none resize-none" placeholder="Security considerations, specific tech stack, etc..." rows="3"></textarea>
+</div>
+</div>
+</div>
+<!-- Submit Section -->
+<div class="pt-8 space-y-8">
+<label class="flex items-start gap-3 cursor-pointer">
+<input class="mt-1 bg-black border-outline-variant text-primary rounded-none focus:ring-primary focus:ring-offset-black" type="checkbox"/>
+<span class="text-on-surface-variant text-body-md">I agree to be contacted regarding my enquiry and acknowledge the Sovereign Engagement Protocol.</span>
+</label>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="flex-1 bg-primary text-on-primary font-label-caps text-label-caps py-5 px-8 rounded-lg tracking-[0.2em] transition-all duration-300 emerald-glow-hover hover:brightness-110" type="submit">
+                                    Request Free Consultation
+                                </button>
+<button class="flex-1 border border-primary text-primary font-label-caps text-label-caps py-5 px-8 rounded-lg tracking-[0.2em] transition-all duration-300 hover:bg-primary/10" type="button">
+                                    Schedule a Call
+                                </button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter">
+<div class="font-headline-md text-headline-md text-on-surface">Veloryx</div>
+<div class="flex flex-col md:flex-row items-center gap-8">
+<nav class="flex gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-opacity" href="#">Privacy Protocol</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-opacity" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-opacity" href="#">Security Whitepaper</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-opacity" href="#">Global Offices</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Veloryx Technologies. Architectural Integrity Guaranteed.
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for form inputs
+        document.querySelectorAll('.instrument-input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').style.color = '#10b981';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').style.color = '';
+            });
+        });
+
+        // Form submission simulation
+        document.getElementById('consultancy-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = 'TRANSMITTING...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerText = 'PROTOCOL INITIATED';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-on-surface-variant');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.add('bg-primary');
+                    btn.classList.remove('bg-on-surface-variant');
+                    btn.disabled = false;
+                }, 3000);
+            }, 2000);
+        });
+    </script>
+</body></html>

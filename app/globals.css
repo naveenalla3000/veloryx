@@ -172,6 +172,32 @@ body {
   100% { top: 105%; }
 }
 
+.blueprint-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(16, 185, 129, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.emerald-glow {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+.emerald-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+}
+
+.instrument-input {
+  background: #000000;
+  border: 1px solid #3c4a42;
+  color: #e1e2e7;
+  transition: all 0.3s ease-out;
+}
+
+.instrument-input:focus {
+  border-color: #10b981;
+  outline: none;
+  box-shadow: 0 4px 0 -2px #10b981;
+}
+
 .tech-grid {
   background-image:
     linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
