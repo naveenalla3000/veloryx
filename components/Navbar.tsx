@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import ServicesDropdown from './ServicesDropdown'
 import ProductsDropdown from './ProductsDropdown'
@@ -82,6 +82,32 @@ function MobileAccordion({
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const close = () => setMenuOpen(false)
+  const touchStartX = useRef(0)
+  const touchStartY = useRef(0)
+
+  // Swipe right-edge → open; swipe right on open panel → close
+  useEffect(() => {
+    function onTouchStart(e: TouchEvent) {
+      touchStartX.current = e.touches[0].clientX
+      touchStartY.current = e.touches[0].clientY
+    }
+    function onTouchEnd(e: TouchEvent) {
+      const dx = e.changedTouches[0].clientX - touchStartX.current
+      const dy = e.changedTouches[0].clientY - touchStartY.current
+      if (Math.abs(dy) > Math.abs(dx) * 1.2) return // mostly vertical — ignore
+      if (!menuOpen && touchStartX.current > window.innerWidth - 32 && dx < -50) {
+        setMenuOpen(true)   // swipe left from right edge
+      } else if (menuOpen && dx > 80) {
+        setMenuOpen(false)  // swipe right to close
+      }
+    }
+    document.addEventListener('touchstart', onTouchStart, { passive: true })
+    document.addEventListener('touchend', onTouchEnd, { passive: true })
+    return () => {
+      document.removeEventListener('touchstart', onTouchStart)
+      document.removeEventListener('touchend', onTouchEnd)
+    }
+  }, [menuOpen])
 
   return (
     <>
@@ -129,11 +155,8 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="fixed inset-0 z-[100] md:hidden">
-          {/* Backdrop */}
-          <div
-            className="mobile-menu-backdrop absolute inset-0 bg-black/70 backdrop-blur-sm"
-            onClick={close}
-          />
+          {/* Backdrop — tap does nothing; swipe right on panel to close */}
+          <div className="mobile-menu-backdrop absolute inset-0 bg-black/70 backdrop-blur-sm" />
 
           {/* Slide panel */}
           <div className="mobile-menu-panel absolute top-0 right-0 h-full w-[min(340px,90vw)] bg-surface-container-low border-l border-white/10 flex flex-col shadow-2xl">
