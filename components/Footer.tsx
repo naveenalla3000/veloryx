@@ -140,9 +140,9 @@ export default function Footer() {
           © {new Date().getFullYear()} Veloryx Technologies FZ-LLC. All rights reserved. Registered in RAKEZ, United Arab Emirates.
         </p>
         <div className="flex gap-6">
-          <a href="#" className="font-mono-technical text-[11px] text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a>
-          <a href="#" className="font-mono-technical text-[11px] text-on-surface-variant hover:text-primary transition-colors">Terms of Service</a>
-          <a href="#" className="font-mono-technical text-[11px] text-on-surface-variant hover:text-primary transition-colors">Security</a>
+          <a href="/privacy" className="font-mono-technical text-[11px] text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a>
+          <a href="/terms" className="font-mono-technical text-[11px] text-on-surface-variant hover:text-primary transition-colors">Terms of Service</a>
+          <a href="/contact" className="font-mono-technical text-[11px] text-on-surface-variant hover:text-primary transition-colors">Security</a>
         </div>
       </div>
 
