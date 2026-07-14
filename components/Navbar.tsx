@@ -6,8 +6,8 @@ export default function Navbar() {
       <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-0 w-full max-w-[1440px] mx-auto">
         <Image src="/logo.png" alt="Veloryx Technologies" width={120} height={30} className="object-contain mix-blend-screen" priority />
         <div className="hidden md:flex items-center space-x-8">
+          <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/services">Services</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Solutions</a>
-          <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Expertise</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Projects</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="/about">About</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Insights</a>

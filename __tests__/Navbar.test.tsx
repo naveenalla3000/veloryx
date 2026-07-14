@@ -9,8 +9,8 @@ describe('Navbar', () => {
 
   it('renders all nav links', () => {
     render(<Navbar />)
+    expect(screen.getByText('Services')).toBeInTheDocument()
     expect(screen.getByText('Solutions')).toBeInTheDocument()
-    expect(screen.getByText('Expertise')).toBeInTheDocument()
     expect(screen.getByText('Projects')).toBeInTheDocument()
     expect(screen.getByText('About')).toBeInTheDocument()
     expect(screen.getByText('Insights')).toBeInTheDocument()
