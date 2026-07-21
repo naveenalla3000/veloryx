@@ -87,16 +87,16 @@ export default function LegalPageLayout({ title, subtitle, lastUpdated, sections
               <div className="glass-card rounded-xl p-8 border border-primary/10">
                 <p className="font-label-caps text-label-caps text-primary tracking-widest mb-3 uppercase">Governing Entity</p>
                 <p className="font-body-md text-body-md text-on-surface mb-1 font-semibold">Veloryx Technologies FZ-LLC</p>
-                <p className="font-body-md text-body-md text-on-surface-variant">Ras Al Khaimah Economic Zone (RAKEZ)</p>
-                <p className="font-body-md text-body-md text-on-surface-variant mb-4">Ras Al Khaimah, United Arab Emirates</p>
+                <p className="font-body-md text-body-md text-on-surface-variant">CWEP9900, Compass Building, Al Shohada Road</p>
+                <p className="font-body-md text-body-md text-on-surface-variant mb-4">AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates</p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="mailto:contact@veloryx.com" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-mono-technical text-mono-technical">
+                  <a href="mailto:info@veloryx.ae" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-mono-technical text-mono-technical">
                     <span className="material-symbols-outlined text-[16px]">mail</span>
-                    contact@veloryx.com
+                    info@veloryx.ae
                   </a>
-                  <a href="tel:+97172435000" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-mono-technical text-mono-technical">
+                  <a href="tel:+971558829451" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-mono-technical text-mono-technical">
                     <span className="material-symbols-outlined text-[16px]">call</span>
-                    +971 7 243 5000
+                    +971 55 882 9451
                   </a>
                 </div>
               </div>

@@ -1,13 +1,13 @@
 export default function FloatingCall() {
   return (
     <a
-      href="tel:+97172435000"
+      href="tel:+971558829451"
       aria-label="Call Veloryx Technologies"
       className="fixed bottom-6 right-6 z-50 group flex items-center gap-3"
     >
       {/* Tooltip */}
       <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-surface-container-low border border-white/10 text-on-surface font-mono-technical text-[11px] tracking-widest px-3 py-2 rounded whitespace-nowrap shadow-lg pointer-events-none">
-        +971 7 243 5000
+        +971 55 882 9451
       </span>
 
       {/* Button */}

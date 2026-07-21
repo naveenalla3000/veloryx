@@ -22,15 +22,15 @@ const SERVICES = [
 const CONTACT_ITEMS = [
   {
     icon: 'location_on',
-    lines: ['Veloryx Technologies FZ-LLC', 'Ras Al Khaimah Economic Zone (RAKEZ)', 'Ras Al Khaimah, United Arab Emirates'],
+    lines: ['CWEP9900, Compass Building', 'Al Shohada Road, AL Hamra Industrial Zone-FZ', 'Ras Al Khaimah, United Arab Emirates'],
   },
   {
     icon: 'call',
-    lines: ['+971 7 243 5000'],
+    lines: ['+971 55 882 9451'],
   },
   {
     icon: 'mail',
-    lines: ['contact@veloryx.com'],
+    lines: ['info@veloryx.ae'],
   },
   {
     icon: 'schedule',

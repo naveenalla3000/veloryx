@@ -4,11 +4,11 @@ const CONTACT_ITEMS = [
     label: 'Geographic Node',
     content: (
       <>
-        Veloryx Technologies FZ-LLC
+        CWEP9900, Compass Building
         <br />
-        Ras Al Khaimah Economic Zone
+        Al Shohada Road, AL Hamra Industrial Zone-FZ
         <br />
-        United Arab Emirates
+        Ras Al Khaimah, United Arab Emirates
       </>
     ),
     mono: false,
@@ -16,13 +16,13 @@ const CONTACT_ITEMS = [
   {
     icon: 'hub',
     label: 'Direct Channel',
-    content: '+971 7 243 5000',
+    content: '+971 55 882 9451',
     mono: true,
   },
   {
     icon: 'satellite_alt',
     label: 'Data Exchange',
-    content: 'contact@veloryx.com',
+    content: 'info@veloryx.ae',
     mono: true,
   },
 ]
